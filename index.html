@@ -10,7 +10,8 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<h1>Crystals Collector</h1>
+			<h1 id="header">Crystals Collector</h1>
+			<hr>
 			<p>
 				You will be given a random number at the start of the game.
 			</p>
@@ -23,6 +24,25 @@
 			<p>
 				Each time when the game starts, the game will change the values in each crystal.
 			</p>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-lg-9">
+				<h1 id="winNumber">39</h1>
+				<hr>
+			</div>
+			<div class="col-lg-3">
+				<p>Win: <span id="win">0</span></p>
+				<p>Lose: <span id="lose">0</span></p>
+			</div>
+		</div>
+		<div class="row">
+			<div id="crystals"></div>
+			<hr>
+		</div>
+		<div class="row">
+			<p>Your total score is:</p>
+			<h1 id="score">0</h1>
 		</div>
 	</div>	
 	
