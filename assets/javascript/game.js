@@ -5,11 +5,12 @@ var otherNum = [39, 44, 40, 55];
 var chosenNumber = otherNum[Math.floor(Math.random() * otherNum.length)];
 var numbers = [10,11,5,2];
 var randNum = numbers[Math.floor(Math.random() * numbers.length)];
-console.log(randNum)
 var images = ["assets/images/gem_1.jpg", "assets/images/gem_2.jpg", "assets/images/gem_3.jpg", "assets/images/gem_4.jpg",]
 var counter = 0;
 $('#winNumber').text(chosenNumber);
 
+// create a function to create crystals
+function crystalCreator () {
   for (var i=0; i< numbers.length; i++){
 
       var imageCrystal = $('<img>');
@@ -24,8 +25,10 @@ $('#winNumber').text(chosenNumber);
 
       $('#crystals').append(imageCrystal);
     } 
-
-
+}
+//invoke crystals
+crystalCreator();
+  
     $('.crystalImage').on('click', function(){
       counter = counter + parseInt($(this).data('num'));
       
@@ -38,6 +41,7 @@ $('#winNumber').text(chosenNumber);
     		$('#win').text(win);
     		chosenNumber = otherNum[Math.floor(Math.random() * otherNum.length)];
     		$('#winNumber').text(chosenNumber);
+        
       } else if( counter > chosenNumber){
       	lose++;
     		counter = 0;
